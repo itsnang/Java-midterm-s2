@@ -48,12 +48,10 @@ public class LockerApplication {
                 String inputPassword = new String(passwordField.getPassword());
 
                 if (savedPassword == null) {
-                    // Set the password first time
                     savedPassword = inputPassword;
                     JOptionPane.showMessageDialog(frame, "Password Set.", "Info", JOptionPane.INFORMATION_MESSAGE);
-                    instructionLabel.setText("Password set. Enter your password to unlock:");
+                    instructionLabel.setText("Password set successfully. Enter your passcode.");
                 } else {
-                    // Verify the password
                     if (savedPassword.equals(inputPassword)) {
                         JOptionPane.showMessageDialog(frame, "Correct Password!", "Info",
                                 JOptionPane.INFORMATION_MESSAGE);
